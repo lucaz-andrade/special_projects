@@ -1,7 +1,7 @@
 #%%  
 from typing import List, Dict, Callable 
 from lm_studio import llm_call, simple_call
-from helpscout_api import get_oauth_token, get_threads_by_tag, get_conversations_by_tag
+from helpscout_tickets_agent.helpscout_api import get_oauth_token, get_threads_by_tag, get_conversations_by_tag
 import requests
 import os
 from dotenv import load_dotenv
@@ -16,7 +16,7 @@ app_secret  = os.getenv('HP_APP_SECRET')
 #%%
 # API calls
 conversations = get_conversations_by_tag("reconciliation")
-threads = get_threads_by_tag('reconciliation')
+#threads = get_threads_by_tag('reconciliation')
 #%%
 refine_prompt = (
     """

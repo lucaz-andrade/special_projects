@@ -31,7 +31,7 @@ def llm_call(prompt: str, system_prompt: str = "", model="local-model") -> str:
         response = client.chat.completions.create(
             model=model,  # LM Studio ignores this, uses loaded model
             messages=messages,
-            max_tokens=4096,
+            max_tokens=8000,
             temperature=0.1,
         )
         

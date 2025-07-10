@@ -175,16 +175,74 @@ def conversations_to_dataframe(conversations):
     return df
 #%% 
 # Create fucntions to convert threads result to dataframe
+def flatten_convo(convo):
+    """
+    Flattens a single Help Scout conversation dictionary into a flat dict.
+    """
+    # Helper to safely extract nested fields
+    def get(d, keys, default=None):
+        for key in keys:
+            if not isinstance(d, dict):
+                return default
+            d = d.get(key)
+            if d is None:
+                return default
+        return d or default
 
+
+    # Safely extract tags
+    tags = convo.get('tags', [])
+    tag_names = []
+    for tag in tags:
+        if isinstance(tag, dict) and 'name' in tag:
+            tag_names.append(tag['name'])
+
+    return {
+        "id": convo.get("id"),
+        "number": convo.get("number"),
+        "subject": convo.get("subject"),
+        "status": convo.get("status"),
+        "state": convo.get("state"),
+        "mailbox_id": convo.get("mailboxId"),
+        "created_at": convo.get("createdAt"),
+        "modified_at": convo.get("modifiedAt"),
+        "tags": ', '.join(tag_names),
+        "customer_id": get(convo, ["customer", "id"]),
+        "customer_first": get(convo, ["customer", "first"]),
+        "customer_last": get(convo, ["customer", "last"]),
+        "customer_email": get(convo, ["customer", "email"]),
+        "assigned_to_id": get(convo, ["assignee", "id"]),
+        "assigned_to_first": get(convo, ["assignee", "first"]),
+        "assigned_to_last": get(convo, ["assignee", "last"]),
+        "assigned_to_email": get(convo, ["assignee", "email"]),
+        "closed_by_id": get(convo, ["closedBy", "id"]),
+        "closed_by_first": get(convo, ["closedBy", "first"]),
+        "closed_by_last": get(convo, ["closedBy", "last"]),
+        "closed_by_email": get(convo, ["closedBy", "email"]),
+        "closed_at": convo.get("closedAt"),
+        "source_type": get(convo, ["source", "type"]),
+        "source_via": get(convo, ["source", "via"]),
+        "thread_count": convo.get("threadCount"),
+        "folder_id": convo.get("folderId"),
+        "is_draft": convo.get("isDraft"),
+        "is_spam": convo.get("isSpam"),
+        "is_auto_reply": convo.get("isAutoReply"),
+    }
 def flatten_thread(thread):
     # Helper to safely extract nested fields
     def get(d, keys, default=None):
         for key in keys:
-            d = d.get(key, {})
+            if not isinstance(d, dict):
+                return default
+            d = d.get(key)
+            if d is None:
+                return default
         return d or default
 
     return {
         "id": thread.get("id"),
+        "conversation_id": thread.get("conversation_id"),  # <-- add this
+        "conversation_number": thread.get("conversation_number"),  # <-- add this
         "type": thread.get("type"),
         "status": thread.get("status"),
         "state": thread.get("state"),

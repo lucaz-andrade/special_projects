@@ -1,0 +1,670 @@
+{
+  "matches": 3125,
+  "discrepancies": 41,
+  "file_details": {
+    "zamp_rows": 3479,
+    "shopify_rows": 13058,
+    "zamp_order_level_rows": 3162,
+    "shopify_order_level_rows": 2971,
+    "zamp_order_level_tax_total": 34434.15,
+    "shopify_order_level_tax_total": 17948.36,
+    "zamp_order_level_transaction_total": 539106.16,
+    "shopify_order_level_transaction_total": 0.0,
+    "tax_difference": 16485.79,
+    "matching_orders": 3125,
+    "missing_from_shopify": 37,
+    "missing_from_zamp": 4,
+    "matching_shopify_tax": 17813.06,
+    "matching_zamp_tax": 34818.36,
+    "matching_tax_difference": 17005.3
+  },
+  "state_differences": [
+    {
+      "state": "AE",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "AK",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "AL",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "AR",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "AZ",
+      "zamp_tax": 1253.47,
+      "shopify_tax": 802.63,
+      "absolute_difference": 450.8,
+      "percentage_difference": 36.0
+    },
+    {
+      "state": "CA",
+      "zamp_tax": 11570.04,
+      "shopify_tax": 8323.81,
+      "absolute_difference": 3246.2,
+      "percentage_difference": 28.1
+    },
+    {
+      "state": "CO",
+      "zamp_tax": 1593.19,
+      "shopify_tax": 988.07,
+      "absolute_difference": 605.1,
+      "percentage_difference": 38.0
+    },
+    {
+      "state": "CT",
+      "zamp_tax": 442.11,
+      "shopify_tax": 262.36,
+      "absolute_difference": 179.8,
+      "percentage_difference": 40.7
+    },
+    {
+      "state": "DC",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "DE",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "FL",
+      "zamp_tax": -22.35,
+      "shopify_tax": -22.35,
+      "absolute_difference": 0.0,
+      "percentage_difference": -0.0
+    },
+    {
+      "state": "GA",
+      "zamp_tax": 1139.07,
+      "shopify_tax": 811.09,
+      "absolute_difference": 328.0,
+      "percentage_difference": 28.8
+    },
+    {
+      "state": "HI",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "IA",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "ID",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "IL",
+      "zamp_tax": 329.79,
+      "shopify_tax": 290.68,
+      "absolute_difference": 39.1,
+      "percentage_difference": 11.9
+    },
+    {
+      "state": "IN",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "KS",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "KY",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "LA",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "MA",
+      "zamp_tax": 1179.91,
+      "shopify_tax": 924.47,
+      "absolute_difference": 255.4,
+      "percentage_difference": 21.6
+    },
+    {
+      "state": "MD",
+      "zamp_tax": 4.08,
+      "shopify_tax": 2.04,
+      "absolute_difference": 2.0,
+      "percentage_difference": 49.0
+    },
+    {
+      "state": "ME",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "MI",
+      "zamp_tax": 405.67,
+      "shopify_tax": 316.03,
+      "absolute_difference": 89.6,
+      "percentage_difference": 22.1
+    },
+    {
+      "state": "MN",
+      "zamp_tax": 7.93,
+      "shopify_tax": 3.2,
+      "absolute_difference": 4.7,
+      "percentage_difference": 59.3
+    },
+    {
+      "state": "MO",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "MS",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "MT",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "NC",
+      "zamp_tax": 1.99,
+      "shopify_tax": -0.3,
+      "absolute_difference": 2.3,
+      "percentage_difference": 115.6
+    },
+    {
+      "state": "ND",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "NE",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "NH",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "NJ",
+      "zamp_tax": 0.0,
+      "shopify_tax": 25.65,
+      "absolute_difference": -25.6,
+      "percentage_difference": null
+    },
+    {
+      "state": "NM",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "NV",
+      "zamp_tax": 821.84,
+      "shopify_tax": 627.17,
+      "absolute_difference": 194.7,
+      "percentage_difference": 23.7
+    },
+    {
+      "state": "NY",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "OH",
+      "zamp_tax": 1653.46,
+      "shopify_tax": 1065.7,
+      "absolute_difference": 587.8,
+      "percentage_difference": 35.5
+    },
+    {
+      "state": "OK",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "OR",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "PA",
+      "zamp_tax": 76.92,
+      "shopify_tax": 4.59,
+      "absolute_difference": 72.3,
+      "percentage_difference": 94.0
+    },
+    {
+      "state": "PR",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "RI",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "SC",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "SD",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "TN",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "TX",
+      "zamp_tax": 0.0,
+      "shopify_tax": 13.86,
+      "absolute_difference": -13.9,
+      "percentage_difference": null
+    },
+    {
+      "state": "UT",
+      "zamp_tax": 11200.77,
+      "shopify_tax": 1485.43,
+      "absolute_difference": 9715.3,
+      "percentage_difference": 86.7
+    },
+    {
+      "state": "VA",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "VT",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "WA",
+      "zamp_tax": 2776.26,
+      "shopify_tax": 2024.22,
+      "absolute_difference": 752.0,
+      "percentage_difference": 27.1
+    },
+    {
+      "state": "WI",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "WV",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "WY",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    }
+  ],
+  "loop_transactions_state_diff": [
+    {
+      "state": "AL",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "AZ",
+      "zamp_tax": 0.0,
+      "shopify_tax": 89.17,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "CA",
+      "zamp_tax": 0.0,
+      "shopify_tax": 451.89,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "CO",
+      "zamp_tax": 0.0,
+      "shopify_tax": 199.73,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "CT",
+      "zamp_tax": 0.0,
+      "shopify_tax": 34.67,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "FL",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "GA",
+      "zamp_tax": 0.0,
+      "shopify_tax": 49.92,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "HI",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "IA",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "ID",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "IL",
+      "zamp_tax": 0.0,
+      "shopify_tax": 39.13,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "IN",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "KS",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "KY",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "MA",
+      "zamp_tax": 0.0,
+      "shopify_tax": 114.15,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "MD",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "ME",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "MN",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "MT",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "NC",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "ND",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "NH",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "NJ",
+      "zamp_tax": 0.0,
+      "shopify_tax": 25.65,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "NM",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "NV",
+      "zamp_tax": 0.0,
+      "shopify_tax": 42.38,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "NY",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "OH",
+      "zamp_tax": 0.0,
+      "shopify_tax": 20.87,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "OK",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "OR",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "PA",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "RI",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "SC",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "SD",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "TX",
+      "zamp_tax": 0.0,
+      "shopify_tax": 13.86,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "UT",
+      "zamp_tax": 0.0,
+      "shopify_tax": 18.26,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "VA",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "VT",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "WA",
+      "zamp_tax": 0.0,
+      "shopify_tax": 117.73,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    },
+    {
+      "state": "WI",
+      "zamp_tax": 0.0,
+      "shopify_tax": 0.0,
+      "absolute_difference": 0.0,
+      "percentage_difference": null
+    }
+  ],
+  "order_edited_df": null
+}

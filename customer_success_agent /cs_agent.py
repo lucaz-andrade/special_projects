@@ -1,7 +1,7 @@
 #%%  
 from typing import List, Dict, Callable 
 from lm_studio import llm_call, simple_call
-from helpscout_tickets_agent.helpscout_api import get_oauth_token, get_threads_by_tag, get_conversations_by_tag
+from helpscout_api import get_oauth_token, get_threads_by_tag, get_conversations_by_tag
 import requests
 import os
 from dotenv import load_dotenv
@@ -16,20 +16,18 @@ app_secret  = os.getenv('HP_APP_SECRET')
 #%%
 # API calls
 conversations = get_conversations_by_tag("reconciliation")
+threads_list = get_threads_by_tag("reconciliation")
 #threads = get_threads_by_tag('reconciliation')
 #%%
 refine_prompt = (
     """
-    Analyze the inputs and provide an overview of the customer’s request and the reason for their email. 
-    Then, check if any member of the support team (account managers or technical success) has already responded 
-    or added internal comments detailing the diagnosis of the request, the response to the customer, or the next steps.
+    Provide the results of doing these two tasks on the chat history provided below for the user {}
+    task 1 : assess if the tone is happy = 1 , neutral = 0 or unhappy = -1
+    task 2 : summarize the text with a maximum of 512 characters
+    Return the answer as a JSON string with fields [sentiment, summary, conversation_id] do NOT explain your answer
 
-	If so, summarize the actions taken by the team and include this summary in your ticket overview.
-
-    Provide an overview of the root cause of the issue.
-
-	Finally, create an action plan with tasks, owners, and deadlines to respond to the customer within a satisfactory timeline, 
-    ensuring great customer satisfaction. Return the result in a markdown table format.
+    Important: Conversations created by address like '@zamp.com' are not from a customer. 
+    You should not consider it in yout sentiment analysis.
     """
     ) 
 
@@ -39,9 +37,9 @@ conversation_response = {"_embedded": {"threads": conversations}}
 conversation_list = conversation_response["_embedded"]["threads"] 
 formatted_conversation = json.dumps(conversation_response, indent=3)
 
-threads_response = {"_embedded": {"threads": threads}}
+threads_response = {"_embedded": {"threads": threads_list}}
 formatted_threads= json.dumps(threads_response, indent=3)
-threads_list = threads_response["_embedded"]["threads"]
+threads_consolidated = threads_response["_embedded"]["threads"]
 
 # %%
 # Access first convo
@@ -52,7 +50,7 @@ threads_list = threads_response["_embedded"]["threads"]
 #%% 
 #Filter threads by specific conversation_id
 conversation_id = 2965626701
-filtered_threads = [thread for thread in threads_list if thread.get('conversation_id') == conversation_id]
+filtered_threads = [thread for thread in threads_consolidated if thread.get('conversation_id') == conversation_id]
 # formatted_threads = json.dumps(filtered_threads, indent=2)
 # thread_summary = simple_call(formatted_threads, refine_prompt)
 

@@ -127,6 +127,12 @@ for thread in threads:
 
 #%%
 import json
+from chromadb import PersistentClient 
+
+client = PersistentClient(path="./chroma")
+
+convo_collection = client.get_collection(name="convo-helpscout") 
+thread_collection = client.get_collection(name="thread-helpscout") 
 retrieved_threads = thread_collection.get(limit=1)
 print("\nRetrieved threads:")
 print(json.dumps(retrieved_threads, indent=1))

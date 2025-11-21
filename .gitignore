@@ -1,9 +1,10 @@
 .env
 chroma
 chroma/*
-.csv
+*.csv
 .xlsx 
 myenv
 .venv
 __pycache__
 data
+*.pdf

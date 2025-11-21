@@ -1,10 +1,31 @@
 # %% #Import libraries
-from help_functions import threads_prep, group_threads, get_threads_by_assigned_id
+from help_functions import threads_prep, group_threads, extract_tags, get_conversations_by_inbox, get_threads_by_inbox
 from bs4 import BeautifulSoup
 import pandas as pd
 #%% #API call
-
+#conversations = get_conversations_by_assigned_id('831957')
 #threads = get_threads_by_assigned_id('831957')
+
+# conversations = get_conversations_by_tag('ts-escalation')
+# threads = get_threads_by_tag('ts-escalation')
+
+conversations = get_conversations_by_inbox('294254')
+threads = get_threads_by_inbox('294254')
+#%% 
+df_conversations = pd.DataFrame(conversations)
+
+# with open('data/conversations.csv', 'r') as file:
+#     df_conversations = pd.read_csv(file)
+
+import ast
+
+# Apply the functions to create the 'tags_list' column
+# ast.literal_eval safely converts the string representation of a list back into a list
+df_conversations['tags_list'] = df_conversations['tags'].apply(
+    lambda x: extract_tags(ast.literal_eval(x)) if isinstance(x, str) else extract_tags(x)
+)
+
+df_conversations.to_csv("data/conversations.csv", index=False)
 
 #%%
 cleaned_threads = []
@@ -116,13 +137,10 @@ def process_df_messages(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 #%%
-with open('data/filtered_threads.csv', 'r') as file:
-    filtered_threads = pd.read_csv(file)
-
 # Aplica pipeline e armazena apenas o texto normalizado de cada thread
 #filtered_threads['thread_normalizada'] = filtered_threads['body'].apply(process_df_messages)
 
-treated_threads = process_df_messages(filtered_threads)
+treated_threads = process_df_messages(df_filtered_threads)
 treated_threads.to_csv("data/treated_threads.csv", index=True)
 
 #%% #Group threads per conversation 

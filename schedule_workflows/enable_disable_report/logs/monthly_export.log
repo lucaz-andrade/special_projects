@@ -1,0 +1,70 @@
+/Users/strider/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+============================================================
+Monthly Export Started: 2025-11-21 08:40:00
+============================================================
+
+[1/2] Exporting from Metabase...
+✓ Exported 157 rows to data/metabase_export_20251121_084000.csv
+
+[2/2] Sending email...
+Error: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-11c93e6dbc8sm23097800c88.10 - gsmtp')
+/Users/strider/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+============================================================
+Monthly Export Started: 2025-11-21 08:50:00
+============================================================
+
+[1/2] Exporting from Metabase...
+✓ Exported 157 rows to data/metabase_export_20251121_085000.csv
+
+[2/2] Sending email...
+Error: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2a6fc4f6671sm24480751eec.3 - gsmtp')
+/Users/strider/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+============================================================
+Monthly Export Started: 2025-11-21 09:00:00
+============================================================
+
+[1/2] Exporting from Metabase...
+✓ Exported 157 rows to data/metabase_export_20251121_090000.csv
+
+[2/2] Sending email...
+Error: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-2a6fc204881sm20708440eec.0 - gsmtp')
+/Users/strider/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+============================================================
+Monthly Export Started: 2025-11-21 09:10:00
+============================================================
+
+[1/2] Exporting from Metabase...
+✓ Exported 157 rows to data/metabase_export_20251121_091000.csv
+
+[2/2] Sending email...
+✓ Email sent to techsuccess@zamp.com
+
+============================================================
+✓ Monthly export completed successfully!
+============================================================
+
+/Users/strider/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+============================================================
+Monthly Export Started: 2025-11-21 09:20:00
+============================================================
+
+[1/2] Exporting from Metabase...
+✓ Exported 157 rows to data/metabase_export_20251121_092000.csv
+
+[2/2] Sending email...
+✓ Email sent to landrade@zamp.com
+
+============================================================
+✓ Monthly export completed successfully!
+============================================================
+

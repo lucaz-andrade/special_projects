@@ -1,22 +1,19 @@
 #%%
-from openai import OpenAI
+import ollama
 import os
 import re
 
-# Configure client for LM Studio (OpenAI-compatible endpoint)
-client = OpenAI(
-    api_key="not-needed",  # LM Studio doesn't require a real API key
-    base_url="http://127.0.0.1:1234/v1"  # Default LM Studio endpoint
-)
+# Ollama client is automatically configured to use localhost:11434
+# No explicit client initialization needed
 
-def llm_call(prompt: str, system_prompt: str = "", model="local-model") -> str:
+def llm_call(prompt: str, system_prompt: str = "", model="llama3.1:8b") -> str:
     """
-    Calls the local LM Studio model with the given prompt and returns the response.
+    Calls the local Ollama model with the given prompt and returns the response.
 
     Args:
         prompt (str): The user prompt to send to the model.
         system_prompt (str, optional): The system prompt to send to the model. Defaults to "".
-        model (str, optional): The model identifier (can be any string for local models).
+        model (str, optional): The Ollama model identifier (e.g., "llama3.1:8b", "mistral", "codellama").
 
     Returns:
         str: The response from the language model.
@@ -28,17 +25,19 @@ def llm_call(prompt: str, system_prompt: str = "", model="local-model") -> str:
             messages.append({"role": "system", "content": system_prompt})
         messages.append({"role": "user", "content": prompt})
         
-        response = client.chat.completions.create(
-            model=model,  # LM Studio ignores this, uses loaded model
+        response = ollama.chat(
+            model=model,
             messages=messages,
-            max_tokens=8000,
-            temperature=0.1,
+            options={
+                "num_predict": 8000,  # Equivalent to max_tokens
+                "temperature": 0.1,
+            }
         )
         
-        return response.choices[0].message.content
+        return response['message']['content']
         
     except Exception as e:
-        print(f"LM Studio API error: {e}")
+        print(f"Ollama API error: {e}")
         return ""
     
 

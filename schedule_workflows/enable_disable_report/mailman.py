@@ -7,6 +7,7 @@ from email.mime.base import MIMEBase
 from email import encoders
 from dotenv import load_dotenv
 
+recipients = 'customer_success@zamp.com'
 
 def send_csv_email(csv_file):
     """Send CSV file via Gmail."""
@@ -15,7 +16,7 @@ def send_csv_email(csv_file):
     # Get config
     sender = os.getenv('GMAIL_EMAIL')
     password = os.getenv('GMAIL_APP_PASSWORD')
-    recipients = os.getenv('EMAIL_RECIPIENTS', '').split(',')
+    
     
     # Validate
     if not sender or not password or not recipients[0]:
@@ -27,12 +28,17 @@ def send_csv_email(csv_file):
     msg = MIMEMultipart()
     msg['From'] = sender
     msg['To'] = ', '.join(recipients)
-    msg['Subject'] = "Test Email - Scheduling System"
+    msg['Subject'] = "Enabled/Disabled Review"
      # Email body
-    body = f"""This is a test. I'm building a scheduling system to run monthly exports and emails.
+    body = f"""
+            Action items for this report:
+            - Review the file attached before 1st of each month
+            - For any you have disabled, please update all disabled account/states notes like: “Disabled by Carie for billing reasons”
+            - Review and adjust enabled/disabled setting as appropriate. 
 
-        File: {os.path.basename(csv_file)}
-        Best regards,
+        Context: https://3.basecamp.com/5828705/buckets/38536987/documents/9185041434#__recording_9293636945
+
+        This is an automated message. Please do not reply to this email.
         """
     msg.attach(MIMEText(body, 'plain'))
     

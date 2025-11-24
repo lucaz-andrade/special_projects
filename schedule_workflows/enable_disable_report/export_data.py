@@ -6,6 +6,7 @@ import requests
 from datetime import datetime
 from dotenv import load_dotenv
 
+METABASE_QUESTION_ID = "10100"
 
 class MetabaseClient:
     """Simplified Metabase API client."""
@@ -38,7 +39,7 @@ def main():
     
     # Get required config
     url = os.getenv('METABASE_URL')
-    question_id = os.getenv('METABASE_QUESTION_ID')
+    question_id = METABASE_QUESTION_ID
     api_key = os.getenv('METABASE_API_KEY')
     
     # Validate
@@ -48,7 +49,7 @@ def main():
     try:
         # Connect and export
         client = MetabaseClient(url, api_key)
-        output_file = f"data/metabase_export_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+        output_file = f"data/EnabledDisabledReport_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
         row_count = client.export_to_csv(int(question_id), output_file)
         print(f"✓ Exported {row_count} rows to {output_file}")
     except Exception as e:
